@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class JavaApplication1 {
 
 static String[] pakli = new String[21];
-
+static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         osszeallit();
         kiir();
@@ -31,7 +31,7 @@ static String[] pakli = new String[21];
         }
     }
     
-    public static void kiir() {
+    private static void kiir() {
         for (int i = 1; i < pakli.length; i++) {
             System.out.printf("%-7s".formatted(pakli[i]));
             if(i % 3 == 0) {
@@ -40,8 +40,7 @@ static String[] pakli = new String[21];
         }
     }
     
-    public static int beker() {
-                Scanner sc = new Scanner(System.in);
+    private static int beker() {
         boolean jo;
         int oszlop;
         do {
@@ -52,4 +51,11 @@ static String[] pakli = new String[21];
         return oszlop;
     }
     
+    private static void kever() {
+        //a valasztott oszlop mindig kozepre keruljon
+    }
+    
+    private static void melyikVolt() {
+        System.out.println("A gondolt lap: " + pakli[11]);
+    }
 }
