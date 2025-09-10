@@ -1,6 +1,6 @@
 
 package javaapplication1;
-
+import java.util.Scanner;
 
 public class JavaApplication1 {
 
@@ -9,6 +9,8 @@ static String[] pakli = new String[21];
     public static void main(String[] args) {
         osszeallit();
         kiir();
+
+        beker();
     }
     
     public static void osszeallit() {
@@ -36,7 +38,18 @@ static String[] pakli = new String[21];
                 System.out.println("\n");
             }
         }
-        
-        
     }
+    
+    public static int beker() {
+                Scanner sc = new Scanner(System.in);
+        boolean jo;
+        int oszlop;
+        do {
+            System.out.println("Melyik oszlop (1-3): ");
+            oszlop = sc.nextInt();
+            jo = oszlop >= 1 && oszlop <= 3;
+        } while (!jo);
+        return oszlop;
+    }
+    
 }
