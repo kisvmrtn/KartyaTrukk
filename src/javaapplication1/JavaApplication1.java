@@ -8,9 +8,12 @@ static String[] pakli = new String[21];
 static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         osszeallit();
-        kiir();
-
-        beker();
+        for (int i = 0; i < 3; i++) {
+            kiir();
+            beker();
+            kever();
+        }
+        melyikVolt();
     }
     
     public static void osszeallit() {
@@ -44,7 +47,7 @@ static Scanner sc = new Scanner(System.in);
         boolean jo;
         int oszlop;
         do {
-            System.out.println("Melyik oszlop (1-3): ");
+            System.out.println("\nMelyik oszlop (1-3): ");
             oszlop = sc.nextInt();
             jo = oszlop >= 1 && oszlop <= 3;
         } while (!jo);
